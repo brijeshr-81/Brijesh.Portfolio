@@ -1,0 +1,142 @@
+.navbar_header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  position: fixed;
+  top: 0px;
+  z-index: 11;
+  width: 92vw;
+  height: 100px;
+  background-color: #0a192f;
+  backdrop-filter: blur(10px);
+  transition: var(all 0.25s cubic-bezier(0.645, 0.045, 0.355, 1));
+  filter: none import !important;
+  pointer-events: auto !important;
+  user-select: auto impo !important;
+}
+
+#logo {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  -webkit-box-pack: center;
+  -webkit-box-align: center;
+  padding-left: 50px;
+}
+
+.navbar_nav {
+  position: relative;
+  display: flex;
+  justify-content: space-between;
+  -webkit-box-pack: justify;
+  -webkit-box-align: center;
+  align-items: center;
+  width: 100%;
+  color: #ccd6f6;
+  counter-reset: item 0;
+  z-index: 12;
+}
+
+.navbar_links {
+  align-items: center;
+  display: flex;
+}
+
+.ordered_list,
+.navbar_links {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 0px;
+  margin: 0px;
+  -moz-box-pack: justify;
+  -moz-box-align: center;
+  list-style: outside none none;
+}
+
+li {
+  margin: 0px 5px;
+  position: relative;
+  counter-increment: item 1;
+  font-size: 13px;
+}
+
+li a:hover {
+  color: #4a90e2;
+}
+
+.resume,
+.navbar_menu {
+  color: #4a90e2;
+  background-color: transparent;
+  border: 1px solid #4a90e2;
+  border-radius: 4px;
+  padding: 0.75rem 1rem;
+  line-height: 1px;
+  text-decoration: none;
+  cursor: pointer;
+  transition: all 0.25s cubic-bezier(0.645, 0.045, 0.355, 1);
+  margin-left: 15px;
+  font-size: 13px;
+}
+
+.navbar_menu {
+  display: none;
+}
+
+@media (max-width: 1080px) {
+  .sidebar_left {
+    left: 20px;
+    right: auto;
+  }
+}
+
+@media (max-width: 768px) {
+  .ham {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    position: relative;
+    z-index: 10;
+    margin-right: -15px;
+    padding: 15px;
+    border: 0px;
+    background-color: transparent;
+    color: inherit;
+    text-transform: none;
+    transition-timing-function: linear;
+    transition-duration: 0.15s;
+    transition-property: opacity, filter;
+  }
+
+  .navbar_menu {
+    display: block;
+  }
+
+  .navbar_links {
+    display: none;
+  }
+
+  .menu_tab {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    position: fixed;
+    top: 0px;
+    right: 0px;
+    bottom: 0px;
+    padding: 50px 10px;
+    width: min(75vw, 400px);
+    height: 100vh;
+    outline: 0px;
+    background-color: #112240;
+    box-shadow: -10px 0px 30px -15px rgba(2, 12, 27, 0.7);
+    z-index: 9;
+    transform: translateX(100vw);
+    visibility: hidden;
+  }
+}
+
+.menu_tab {
+  display: none;
+}
